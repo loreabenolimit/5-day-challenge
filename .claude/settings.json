@@ -1,0 +1,16 @@
+{
+  "defaultMode": "acceptEdits",
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m http.server:*)",
+      "Bash(python3 -m pip install:*)",
+      "Bash(python3 dashboard.py:*)",
+      "Bash(npx puppeteer:*)",
+      "Bash(grep:*)",
+      "Bash(curl:*)",
+      "Bash(mkdir:*)",
+      "Bash(lsof:*)",
+      "Bash(pkill:*)"
+    ]
+  }
+}
