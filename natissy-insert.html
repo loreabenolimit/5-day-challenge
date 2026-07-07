@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>natissy Insert</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    width: 100%; height: 100vh;
+    background: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .preview-scaler { transform-origin: center center; }
+  @page { size: 4in 6in; margin: 0; }
+  @media print {
+    html, body { background: #fff; width: auto; height: auto; overflow: visible; display: block; }
+    .preview-scaler { transform: none !important; }
+  }
+
+  .insert {
+    width: 600px;
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse 75% 55% at 50% 32%, rgba(255,255,255,0.06) 0%, transparent 100%),
+      radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0,0,0,0.10) 0%, transparent 60%),
+      #FDFAF6;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .accent-line {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #A5C49A, #CFE7B2 40%, #E7A17A 70%, #A5C49A);
+    z-index: 10;
+  }
+
+  .content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 52px 44px 52px 44px;
+    box-sizing: border-box;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .logo-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .brand-name {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: #4B7A18;
+    line-height: 1;
+    letter-spacing: -0.3px;
+  }
+  .brand-sub {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: #E7A17A;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-top: 1px;
+  }
+
+  .hook-group {
+    flex-shrink: 0;
+    margin-top: 22px;
+  }
+  .hook {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 1.1;
+    color: #3D2B1F;
+    letter-spacing: -0.8px;
+  }
+  .hook .accent { color: #E7A17A; }
+  .hook-sub {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #9A7E5C;
+    margin-top: 9px;
+    letter-spacing: 0.2px;
+  }
+
+  .spacer { flex: 1; min-height: 12px; }
+
+  .cards-section {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 12px;
+  }
+  .card {
+    flex: 1;
+    background: rgba(165, 196, 154, 0.09);
+    border-radius: 14px;
+    border: 1px solid rgba(165, 196, 154, 0.28);
+    padding: 16px 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+  }
+  .card-label {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #3D2B1F;
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(165,196,154,0.45), rgba(231,161,122,0.3), transparent);
+    margin: 18px 0 15px;
+    flex-shrink: 0;
+  }
+
+  .bottom-group {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-block {
+    width: 100%;
+    background: rgba(165, 196, 154, 0.08);
+    border: 1.5px solid #A5C49A;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 18px;
+  }
+  .cta-icon-zone {
+    width: 62px;
+    min-height: 72px;
+    background: #A5C49A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .cta-label-zone {
+    flex: 1;
+    padding: 12px 14px;
+  }
+  .cta-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: #A5C49A;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    line-height: 1;
+  }
+  .cta-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #9A7E5C;
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+  .cta-count-zone {
+    width: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    flex-shrink: 0;
+  }
+  .cta-num {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #3D2B1F;
+    line-height: 1;
+  }
+  .cta-unit {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    color: #9A7E5C;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1px;
+  }
+
+  .qr-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+  }
+  .qr-img { display: block; width: 158px; height: 158px; }
+  .qr-url {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #4B7A18;
+    text-align: center;
+  }
+  .support-line {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    color: #9A7E5C;
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="preview-scaler">
+<div class="insert">
+
+  <div class="accent-line"></div>
+
+  <!-- Botanical background texture: delicate leaf outlines -->
+  <svg style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg">
+    <!-- Top right large leaf -->
+    <path d="M590 0 C568 18, 548 55, 560 85 C575 95, 598 72, 600 45 Z" fill="#A5C49A" opacity="0.07"/>
+    <path d="M600 10 C585 25, 570 50, 575 75" stroke="#A5C49A" stroke-width="1" fill="none" opacity="0.07"/>
+    <!-- Top left leaf cluster -->
+    <path d="M0 80 C15 60, 42 68, 38 98 C22 108, 0 95, 0 80Z" fill="#A5C49A" opacity="0.06"/>
+    <path d="M0 108 C12 92, 35 95, 32 115 C18 120, 0 115, 0 108Z" fill="#CFE7B2" opacity="0.09"/>
+    <!-- Mid-right small leaves -->
+    <path d="M575 280 C582 268, 595 274, 592 288 C584 294, 572 288, 575 280Z" fill="#A5C49A" opacity="0.07"/>
+    <path d="M570 310 C580 300, 593 307, 589 320 C580 325, 568 320, 570 310Z" fill="#CFE7B2" opacity="0.08"/>
+    <!-- Mid-left small leaves -->
+    <path d="M8 320 C14 310, 26 315, 24 328 C16 333, 6 328, 8 320Z" fill="#A5C49A" opacity="0.06"/>
+    <path d="M5 350 C12 340, 25 346, 22 358 C14 364, 4 359, 5 350Z" fill="#CFE7B2" opacity="0.08"/>
+    <!-- Lower right leaf -->
+    <path d="M572 720 C582 706, 598 712, 595 728 C585 736, 570 730, 572 720Z" fill="#A5C49A" opacity="0.07"/>
+    <path d="M580 750 C590 736, 600 742, 598 756 C590 762, 578 756, 580 750Z" fill="#CFE7B2" opacity="0.07"/>
+    <!-- Lower left leaf -->
+    <path d="M5 760 C14 746, 30 752, 27 767 C18 773, 4 768, 5 760Z" fill="#A5C49A" opacity="0.06"/>
+    <!-- Very subtle organic wave lines lower section -->
+    <path d="M0 820 Q100 808, 200 818 Q300 828, 400 815 Q500 803, 600 818" stroke="#CFE7B2" stroke-width="0.7" fill="none" opacity="0.18"/>
+    <path d="M0 840 Q120 828, 240 840 Q360 852, 480 838 Q540 832, 600 840" stroke="#CFE7B2" stroke-width="0.6" fill="none" opacity="0.14"/>
+    <!-- Tiny scattered petal shapes -->
+    <ellipse cx="555" cy="440" rx="5" ry="8" transform="rotate(-20 555 440)" fill="#A5C49A" opacity="0.07"/>
+    <ellipse cx="42" cy="490" rx="4" ry="7" transform="rotate(15 42 490)" fill="#A5C49A" opacity="0.06"/>
+    <ellipse cx="560" cy="580" rx="4" ry="7" transform="rotate(-35 560 580)" fill="#CFE7B2" opacity="0.08"/>
+    <ellipse cx="38" cy="620" rx="5" ry="8" transform="rotate(25 38 620)" fill="#A5C49A" opacity="0.06"/>
+  </svg>
+
+  <div class="content">
+
+    <!-- Logo -->
+    <div class="logo-area">
+      <!-- Simplified bird-and-leaf mark in brand colors -->
+      <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <!-- Large green leaf -->
+        <ellipse cx="20" cy="13" rx="9" ry="13" transform="rotate(-18 20 13)" fill="#5C9B20" opacity="0.88"/>
+        <!-- Lighter inner vein -->
+        <path d="M14 18 C17 14, 21 12, 23 10" stroke="#FDFAF6" stroke-width="0.8" fill="none" opacity="0.5"/>
+        <!-- Small mint leaf right -->
+        <ellipse cx="27" cy="16" rx="5" ry="8" transform="rotate(-38 27 16)" fill="#CFE7B2" opacity="0.9"/>
+        <!-- Terracotta small leaf bottom left -->
+        <ellipse cx="12" cy="22" rx="4" ry="6" transform="rotate(22 12 22)" fill="#E7A17A" opacity="0.75"/>
+        <!-- Earth brown tiny leaf -->
+        <ellipse cx="18" cy="27" rx="3" ry="5" transform="rotate(8 18 27)" fill="#9A7E5C" opacity="0.65"/>
+        <!-- Gold bird body hint -->
+        <ellipse cx="16" cy="9" rx="5" ry="7" transform="rotate(-10 16 9)" fill="#F0A800" opacity="0.8"/>
+        <!-- Bird eye -->
+        <circle cx="14" cy="7" r="1" fill="#FDFAF6" opacity="0.9"/>
+      </svg>
+      <div class="logo-text-group">
+        <span class="brand-name">natissy</span>
+        <span class="brand-sub">by nature</span>
+      </div>
+    </div>
+
+    <!-- Hook -->
+    <div class="hook-group">
+      <div class="hook">One mistake<br><span class="accent">shortens these</span><br>by years.</div>
+      <div class="hook-sub">Scan for your free 5-tip care guide.</div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <!-- 3 care tip cards -->
+    <div class="cards-section">
+
+      <!-- Card 1: Cold Wash Only -->
+      <div class="card">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Water drop shape -->
+          <path d="M22 6 C22 6, 12 19, 12 26 C12 32.6, 16.5 37, 22 37 C27.5 37, 32 32.6, 32 26 C32 19, 22 6, 22 6Z" fill="#A5C49A" fill-opacity="0.15" stroke="#A5C49A" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- Highlight -->
+          <path d="M16.5 24 C17.5 20, 20 18.5, 22 18.5" stroke="#A5C49A" stroke-width="1.4" stroke-linecap="round"/>
+          <!-- Snowflake arms (cold indicator) at top -->
+          <line x1="22" y1="2" x2="22" y2="6" stroke="#A5C49A" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="18.5" y1="2.8" x2="20" y2="5.3" stroke="#A5C49A" stroke-width="1.3" stroke-linecap="round"/>
+          <line x1="25.5" y1="2.8" x2="24" y2="5.3" stroke="#A5C49A" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+        <span class="card-label">Cold Wash<br>Only</span>
+      </div>
+
+      <!-- Card 2: No Softener -->
+      <div class="card">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Leaf shape -->
+          <path d="M22 7 C13 11, 9 21, 13 29 C17 37, 27 37, 31 29 C35 21, 31 11, 22 7Z" fill="#A5C49A" fill-opacity="0.15" stroke="#A5C49A" stroke-width="1.8"/>
+          <!-- Center vein -->
+          <path d="M22 7 L22 37" stroke="#A5C49A" stroke-width="1.4" stroke-linecap="round"/>
+          <!-- Side veins -->
+          <path d="M22 18 L16 22" stroke="#A5C49A" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+          <path d="M22 18 L28 22" stroke="#A5C49A" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+          <!-- No / X in terracotta corner -->
+          <circle cx="33" cy="33" r="7" fill="#FDFAF6" stroke="#E7A17A" stroke-width="1.5"/>
+          <line x1="29.5" y1="29.5" x2="36.5" y2="36.5" stroke="#E7A17A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="36.5" y1="29.5" x2="29.5" y2="36.5" stroke="#E7A17A" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="card-label">Skip the<br>Softener</span>
+      </div>
+
+      <!-- Card 3: Sun Dry -->
+      <div class="card">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sun circle -->
+          <circle cx="22" cy="22" r="8.5" fill="#A5C49A" fill-opacity="0.18" stroke="#A5C49A" stroke-width="1.8"/>
+          <!-- Sun rays -->
+          <line x1="22" y1="5" x2="22" y2="10" stroke="#A5C49A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="22" y1="34" x2="22" y2="39" stroke="#A5C49A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="5" y1="22" x2="10" y2="22" stroke="#A5C49A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="34" y1="22" x2="39" y2="22" stroke="#A5C49A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="10.2" y1="10.2" x2="13.8" y2="13.8" stroke="#A5C49A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="30.2" y1="30.2" x2="33.8" y2="33.8" stroke="#A5C49A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="33.8" y1="10.2" x2="30.2" y2="13.8" stroke="#A5C49A" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="13.8" y1="30.2" x2="10.2" y2="33.8" stroke="#A5C49A" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="card-label">Dry in<br>Sunlight</span>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Bottom group -->
+    <div class="bottom-group">
+
+      <!-- CTA block -->
+      <div class="cta-block">
+        <div class="cta-icon-zone">
+          <!-- Guide/book icon in bg color on sage -->
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="3" width="16" height="21" rx="2" fill="#FDFAF6" opacity="0.95"/>
+            <rect x="10" y="3" width="16" height="21" rx="2" fill="#FDFAF6" opacity="0.55"/>
+            <line x1="7.5" y1="10" x2="17" y2="10" stroke="#A5C49A" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="7.5" y1="14" x2="17" y2="14" stroke="#A5C49A" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="7.5" y1="18" x2="14" y2="18" stroke="#A5C49A" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="cta-label-zone">
+          <div class="cta-title">Get Your Guide</div>
+          <div class="cta-subtitle">5 care tips for liners that last 8 years</div>
+        </div>
+        <div class="cta-count-zone">
+          <span class="cta-num">5</span>
+          <span class="cta-unit">TIPS</span>
+        </div>
+      </div>
+
+      <!-- QR code -->
+      <div class="qr-wrapper">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAsQAAALECAIAAACAN7HUAAAT0UlEQVR4nO3dO5IkwXFAQQ5tb8WbUOepqPMmPFdToQIIQAKvEBNZ7S6vTf2ya5+VkPHz+Xz+DQDgn/Xvv30CAMDdxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACD5M3mw//nf/5483Cr/+R//9Xf/zVP35+RYT5k85xuPdWLb+Txlch2eOLmH2347T62NbWts231+q8n77MsEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQDI6m+PEtv38T2ybGbFtz/9Jb51B8NTfmbz2G+/zicnfxbZ7+NT5bHu3bHuPndg2c8SXCQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBk3WyOE9v2q3/KtrkJN87vmLyup2y7hzfa9k7YNjdhcn7QiW3358S2NbaNLxMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAyZWzOd7qxj3/J/fqf+r+bJtT8FbfPJNl22/5xt+OmTV38WUCAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIDGbY5HJ+QKTMzWesu3+PPV3bnwWJybX4eTfmZxhcWLbtT/F3I27+DIBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkFw5m+Ote7Zvm1Pw1D78257XtvkmkybP+akZFm+9zzfOUvlmN67DSb5MAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACTrZnN88/7wT80pmJx3MHk+/s4M62ePbdc1OXNk8rq++f+dp/gyAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCMzubYtu/9jbbNF5jc037b+tk2p+Apb10/29w4L+NG294bb+XLBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEDy8/l8fvscVntqT/un9od/ajbH5IyPG8/5xDfPO3jK5FyJt66NG2dPTD7Tbe+fbX/nKb5MAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACR/fvsE/hnbZiJM7n++bR/+bc9i27732/bPf4rr2mPb7JLJ3862GSjbzmeSLxMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAyehsjqf2bL9xD/kb/86NbryubfNNTkzOKZic47Dtuk5se29su4eTa+Ob+TIBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkPx8Pp+xg23b/3zbHvtPeet1nbjx2rfNjJg0OZ9i0o3XdePcn22/922/5cln4csEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQPLa2RyTe5vfuH/+U7Y9rxNvnUEweV03Pq+njvWUtz6LE2895xvnGT3FlwkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCA5M9vn8A/Y3JP+237sd+4n/+JyXN+6zM9MXldN67DE9vm/mz7O9s8de3bZsRse4/5MgEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQjM7meOv8hbfOVjixbX/4E9v2vZ9ch0/Zdu1mjuyxbT3f+Hu/8b3qywQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAMjqbY9te6ye2zfg4cXI+2875KZP71T+1Np76OzfOjNj2TrhxbsK28zkx+Sy23Z+3rkNfJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAACSn8/n89vn8Be2zQ7YNu/grXvsT9o2b2Vyjd04w+LGe3hi2/lss23Nb7PtufsyAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJD8+e0T+FeZ3Ld82179N+4zPzkv48a1MXmsb55l8Nbf4I1zLt66Dk9Mzqx5ii8TAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAMnobI7JPdsn3Xhd2/a9n5xvMrnv/bY5Bdue+7ZjbXumN9r2W2aGLxMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAyehsjqf2vZ/cs33bsSZNzimwD//7bFs/T/2dG3/vk+/eG934/8U2vkwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJD+fz2fsYNv2LX/qfL55P/8T285523yByTX21LVvu89vXasntr1Xn3Lje3Xb/xeTfJkAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASEZnc5y4cW/8Sdvuz43zTU5s26t/0o3Pfdvv4ik3zqc4se2ZbnPjO9OXCQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIDkz+TBtu0lfuLG/eEn972/cf7CU2tscq1O3p+3zt24cabGjWvMOXc3nrMvEwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAADJz+fzGTvYtnkQT9m25/+JG2cibJv18JRte+yf2HYPT7x1jsNTbrz2b35HbXsWvkwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJH8mDza5//mkbeezbc/2p/aZf+s8kcm/880m7+G2dTjpxrX61nOeXD++TAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkP5/P57fP4V/ixr3x33rOT83U2HZdJybniZy48R6e2HZdN86RObFthsU3X/sJszkAgGuICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQPLnt0/gr904E+GtcyVutG39TK6Nt67nE9tmxGxbh08da9tafepYT13XjXOInuLLBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAyOptjcg/5SZPns22+wLYZKE/ZNlNj2xq78Vg3zi7ZtjZObHtvbFtj257XU3yZAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEh+Pp/Pb5/DX5jcj31y1sOkt+5F/9ZjnXjrWj2xbY7MtrkS234X32zbO2HyfHyZAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjWzeZ4yjfv1X/Cfv5/21vXxrbnfuM5P2XbtT/lxnv4lG3vDbM5AIBriAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEDyZ/JgN85oOLFtRsOJbTMjTmxbP9ue6YlvPudvnmFxYts93Hask/uz7ZlO8mUCAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBmdzTG5x/5T+6hPzpXYNoNg2xyHbevnKdvW2KRt81+eOtaNz+Ip235fT9n2/tm2fnyZAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEh+Pp/Pb5/DX/jmmQjbZoWcuPEePmXyfDz39x3rxLb3xqQbr+ubn7svEwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAADJn8mD3bg3/onJfdS37f3+lMk95G9cY5O/nW3zDk7c+CxO/s5T17Xt3XtyrBt/pyfe+jv1ZQIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgGZ3NMTnDYnLf8sl977d5677322agbJulsu25n5i8h9vWz6S3zvh4ylv/v/BlAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAZnc2xbQ/5bfvnP7Uf+7b9/Ledz6TJuRuT99ma/9u2zYh56ljb7vOJG9f8jfM7fJkAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASH4+n8/Ywbbt2X7jPvMntu3Z/pQbZyuc2Laf/42zDG607donz2fbmn/Kjb/Bp/gyAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJD8+e0T+GuTe78/5ca91r95D/kT22aybHteJ5461rZn8ZQb561sm9vylG3H2nZ/TvgyAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJD8fD6f3z6Hf9jk3uaTf+fEtlkY2/aH/+bnte1ZnNj2vCZtm9Hwzc/ixDdf+wlfJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAACSP5MHe+se8pPnMzkzYtv9OWH//G7bHJDJ5zX5jtr2Hpu07bom3z+TJu+hLxMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAyehsjm17/p+YPJ+n9qvfts/85HVN3p9tswMm57bQvXU9b5u7MenG99hTfJkAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASEZnc7zVtpkI2/a937aH/FP73k9e1+Se/ye2rfkT22apPPV3blzPJybfh5P3cNv7+Sm+TAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAko7M53rr3+1P7sd+4Z/uNe9FPnvPkbIWnbDufE5PnvG1tnNh2zjf+Bk/c+Nt5ii8TAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAMnobI6n9i1/6zyIp0zuaT/pxmc6OafA8/rbJs9n2zPddu2Tf2fStnfCJF8mAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAAJLR2RwnJudKbDvWW/fzf+uzuNHkdW27h9tmGWy7P9vmB924Vt86d+OELxMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAyc/n8/ntc+D/bZthcWJyD/kb97TfNn/hrc/rm+dKnNh2n2+cYbFt7s+2d50vEwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAADJn8mDbduvftLJPuqTe61P7tX/zfvwn9g262HbszgxeQ/fOgfkrTMjtq3nbffnKb5MAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACSjszlO3Lhv+Y174z+1X/22+RTb5lxsO58T236D2+akbHPjGpt040yfG+ek+DIBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkPx8Pp+xg23bt/zE5MyIEzfu2X5i8h6euHGN3Wjbtd84I2by3bLted1o27v3Kb5MAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACR/fvsE+Mc8tTf+tlkYN87duHEmwlvnApx46tq/+R6+dU7KpG3vn6f4MgEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQmM1xmRv3dZ/cP3/bsU5sexaTTq79qRkNJyafqTk7e2ybOXIjXyYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAkitnc7x1b/MTN84pmDzW5P25cZ7IU/fnxt/gW9fY5PyOp471lMln8ZTJZzH5O/VlAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACD5+Xw+Ywfbtkf6pMk5Dicm92y/cS/6bfMFvtm2NT+5nk9s+y2fuPGcT2x7j03yZQIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgGZ3NAQC8jy8TAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAMn/AWrRB/31pdV5AAAAAElFTkSuQmCC" class="qr-img" alt="QR Code">
+        <div class="qr-url">shop.natissy.eu/liner-care-guide</div>
+      </div>
+
+      <div class="support-line">Questions? support@natissy.eu</div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+
+<script>
+  function fitToScreen() {
+    const el = document.querySelector('.preview-scaler');
+    const insert = document.querySelector('.insert');
+    const scaleX = (window.innerWidth - 40) / insert.offsetWidth;
+    const scaleY = (window.innerHeight - 40) / insert.offsetHeight;
+    el.style.transform = 'scale(' + Math.min(scaleX, scaleY, 1) + ')';
+  }
+  fitToScreen();
+  window.addEventListener('resize', fitToScreen);
+</script>
+</body>
+</html>
