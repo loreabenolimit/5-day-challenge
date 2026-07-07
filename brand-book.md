@@ -11,8 +11,8 @@ colors:
   accent: "#A5C49A"
   secondary: ["#CFE7B2", "#9A7E5C", "#E7A17A", "#F6C89B"]
 fonts:
-  heading: "Nunito"
-  body: "Lato"
+  heading: "Titillium Web"
+  body: "Titillium Web"
 logo: "assets/logo.png"
 logo_white: "none"
 voice: ["warm", "empowering", "natural", "gentle", "honest"]
@@ -64,20 +64,20 @@ The palette is earthy and soft. Sage green (#A5C49A) is the primary brand color.
 
 ## 4. Typography
 
-**Heading font:** Nunito (Google Fonts)
-Rounded, friendly, approachable. Matches the warmth of the logo wordmark. Use Bold (700) for primary headings and SemiBold (600) for subheadings.
+**Heading font:** Titillium Web (Google Fonts)
+Clean, modern, and confident with a geometric structure that pairs well with the natural palette. Use Bold (700) or Black (900) for primary headings, SemiBold (600) for subheadings.
 
-**Body font:** Lato (Google Fonts)
-Clean, neutral, highly readable. Use Regular (400) for body copy and Bold (700) for emphasis.
+**Body font:** Titillium Web (Google Fonts)
+Use Regular (400) for body copy, Light (300) for captions and supporting text, Bold (700) for emphasis.
 
 **How to load:**
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 ```
 
 **Specimen:**
-- Headings: Nunito Bold: "Feel good every day."
-- Body: Lato Regular: "Made from 100% organic cotton, natissy liners are soft, breathable, and free from synthetic chemicals."
+- Headings: Titillium Web Bold: "Feel good every day."
+- Body: Titillium Web Regular: "Made from 100% organic cotton, natissy liners are soft, breathable, and free from synthetic chemicals."
 
 ## 5. Imagery
 
