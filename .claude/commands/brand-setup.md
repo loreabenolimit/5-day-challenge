@@ -418,13 +418,13 @@ logo: "assets/logo.png"          # full-color logo, for light backgrounds. or "n
 logo_white: "assets/logo-white.png"   # white/reversed logo for DARK backgrounds (the Day 5 dashboard's dark mode needs this). or "none"
 voice: ["adjective1", "adjective2", "adjective3"]
 audience: "[one line — who buys and the problem solved]"
-compliance_category: "[none | supplement | health | finance | beauty | other-regulated]"
+compliance_category: "[none | supplement | health | finance | beauty | other-regulated]"   # if not 'none', downloadable guides + ad/email copy need a disclaimer (e.g. the FDA line for supplements). Days 1 to 4 read this.
 shopify_store_handle: "[subdomain from myshopify.com URL, e.g. yourstore — or 'none yet']"
 email_platform: "[klaviyo | mailchimp | omnisend | mailerlite | other — from Step 1b]"
 klaviyo_list_id: "[List ID the opt-in form subscribes people to, e.g. ABC123 — or 'none' if different platform]"
 klaviyo_public_key: "[Public API Key / site ID, safe to expose in page JS, e.g. ABC123 — used by the opt-in form to capture emails; 'none' if different platform]"
-product_nickname: "[short handle for the first-run product from Step 1c, e.g. Alpha Charge]"
-asin: "[the first-run product's Amazon ASIN from Step 1c, e.g. B08VW2NDKX, else 'none']"
+product_nickname: "[short handle for the first-run product from Step 1c, e.g. Alpha Charge]"   # used to label outputs all week
+asin: "[the first-run product's Amazon ASIN from Step 1c, e.g. B08VW2NDKX, else 'none']"   # Day 4 builds the review link from this
 ```
 
 Note: the Klaviyo **public key (site ID)** above is safe to expose and is what the opt-in form's JavaScript uses to capture emails (Day 2). The **private API key** is NOT stored in this file, it lives in `.env` as `KLAVIYO_API_KEY=pk_...` (gitignored) and is used only for server-side setup. Set `compliance_category` from the product type: if it is a supplement, health, finance, or other regulated product, later days add the required disclaimer to any downloadable guide and to ad/email copy automatically.
@@ -435,7 +435,7 @@ Fill `product_nickname` and `asin` from Step 1c (the first-run product). If Step
 [Name, what they sell, the one-line positioning, the customer in a sentence.]
 
 ## 2. Logo
-[Embed the logo. Clear-space rule (keep padding around it equal to or greater than the height of one letter). Minimum size. 2 to 3 quick don'ts: don't stretch, don't recolor, don't add effects.]
+[Embed the logo. Clear-space rule (keep padding around it ≥ the height of one letter). Minimum size. 2–3 quick don'ts: don't stretch, don't recolor, don't add effects.]
 
 ## 3. Colors
 [Each color as a labeled swatch with its HEX and its ROLE: background / text / accent / secondary. Note where each is used — accent for buttons, CTAs, highlights; text for body; background for surfaces.]
@@ -446,14 +446,14 @@ Fill `product_nickname` and `asin` from Step 1c (the first-run product). If Step
 ## 5. Imagery
 [Direction for product and lifestyle shots — the feel, not a stock library. Include the saved product shots if any. Note the kind of imagery that fits the voice.]
 
-## 6. Voice and tone
-[The 3 to 5 adjectives. 2 to 3 "we sound like this" example sentences written in their voice. A short do/don't word list if they gave one. One line on tone shifts by context if relevant — e.g. punchy in ads, warmer in emails.]
+## 6. Voice & tone
+[The 3–5 adjectives. 2–3 "we sound like this" example sentences written in their voice. A short do/don't word list if they gave one. One line on tone shifts by context if relevant — e.g. punchy in ads, warmer in emails.]
 
 ## 7. Audience
 [Who buys, the problem they have, the transformation after your product. This is what makes every later day's copy land — keep it concrete.]
 
 ## 8. Using this brand book in the challenge
-[One short paragraph: this file is your single source of truth. Days 1 to 5 (insert, landing page, post-opt-in, emails) all build from these colors, fonts, voice, and audience. You can edit this file any time as your brand evolves — and reuse it anywhere outside the challenge too.]
+[One short paragraph: this file is your single source of truth. Days 1–5 (insert, landing page, post-opt-in, emails) all build from these colors, fonts, voice, and audience. You can edit this file any time as your brand evolves — and reuse it anywhere outside the challenge too.]
 ```
 
 Fill every section with THEIR specifics — never leave a template placeholder in the final file. Keep the machine-readable YAML block accurate; that's what later days parse.
@@ -465,7 +465,7 @@ Fill every section with THEIR specifics — never leave a template placeholder i
 Turn the markdown into a clean, on-brand HTML document — this is what becomes the PDF. It should look like a real brand guide, using their own colors and fonts so it feels like *theirs*.
 
 Design requirements:
-- **Letter-size pages** (8.5in x 11in), multi-page, with generous margins. This is a document, not a one-pager.
+- **Letter-size pages** (8.5in × 11in), multi-page, with generous margins. This is a document, not a one-pager.
 - A **cover page**: brand name large, logo, one-liner, "Brand Book" + the date.
 - One clean section per the 8 headings above. Use their heading font for titles, body font for text.
 - **Color swatches** rendered as actual colored blocks with the HEX printed on/under each.
@@ -494,20 +494,21 @@ Load their fonts via the `<link>` you identified in Step 3 (Google Fonts or Font
 
 **Do NOT export the PDF yet.**
 
-0. **Dash sweep (mandatory, before anything else, on BOTH paths).** `brand-book.md` (and `brand-book.html` if you built it) must contain zero em dashes and zero en dashes. Run:
+0. **Dash sweep (mandatory, before anything else, on BOTH paths).** `brand-book.md` (and `brand-book.html` if you built it) must contain zero em dashes (—) and zero en dashes (–). Run:
    ```bash
    grep -n "—\|–\|&mdash;\|&ndash;" brand-book.md brand-book.html
    ```
-   If it prints anything, rewrite each line to remove the dash (comma, colon, period, parentheses, or "to" for a range) and re-run until the command returns nothing.
+   (Include the HTML entities. If `brand-book.html` does not exist on the label/tiny path, the grep just skips it.) If it prints anything, rewrite each line to remove the dash (comma, colon, period, parentheses, or "to" for a range) and re-run until the command returns nothing. **Run this even on the label/tiny path where the only deliverable is `brand-book.md`**, so that file never ships with a dash. This is the catch-net for the HARD RULE at the top of this skill.
 
 1. Save the HTML to `brand-book.html` in the **current working directory** (never `/tmp`).
-2. Start a local server: `python3 -m http.server 7770 --directory "$(pwd)" &` (use port 7770).
-3. **Primary preview = headless screenshot (no extension needed).** Render page(s) to PNG at Letter dimensions using the system-Chrome ladder from Step 8, and show them inline with the Read tool.
+2. Start a local server: `python3 -m http.server 7770 --directory "$(pwd)" &` (use port 7770; serving `/tmp` on all interfaces is blocked by security policy).
+3. **Primary preview = headless screenshot (no extension needed).** Render page(s) to PNG at Letter dimensions using the system-Chrome ladder from Step 8, and show them inline with the Read tool. This is the preview everyone sees — works in the desktop app with no extension, no install.
 4. **Optional, only if the Chrome extension is available:** also open the live page so they can scroll it:
    ```
    navigate to: http://localhost:7770/brand-book.html
    ```
-5. **Reassure + suggest.** Open with: *"This is your first draft, nothing's locked. Colors, fonts, the cover, any wording, all changeable in seconds. Just say the word."* Then offer 2 to 4 concrete, tailored suggestions for THIS brand, and the export exit ("Or if you love it, I'll turn it into your PDF.").
+   (Always `http://localhost:...`, never `file://`.) If the extension isn't available, skip this — the screenshot already showed it. Never tell them to open the HTML themselves.
+5. **Reassure + suggest — don't just ask "any tweaks?"** Open with: *"This is your first draft, nothing's locked. Colors, fonts, the cover, any wording, all changeable in seconds. Just say the word."* Then offer 2–4 concrete, tailored suggestions for THIS brand (e.g. *"Want the accent a touch deeper? Swap the cover to feature your product shot? Tighten the voice section?"*), and the export exit ("Or if you love it, I'll turn it into your PDF.").
 
 Loop here until they're happy. When they approve, go to Step 8.
 
@@ -544,34 +545,55 @@ Claude runs this itself and saves the file — the user does nothing.
 ### Step 9 — Wrap up (set up Day 1)
 
 Confirm what they now have, in their folder:
-- brand-book.md — the working source of truth the rest of the challenge reads (always produced)
-- brand-book.pdf — their polished brand book, use it anywhere (only if a fresh one was generated)
-- assets/ — their logo and product shots (if any were saved)
+- ✅ `brand-book.md` — the working source of truth the rest of the challenge reads (always produced)
+- ✅ `brand-book.pdf` — their polished brand book, use it anywhere *(only if a fresh one was generated — skip this line for path A, where they kept their own document)*
+- ✅ `assets/` — their logo and product shots (if any were saved)
 
 And confirm they're **fully connected for the week** (from Step 1b), so every later day is just "run the skill":
 
 **Claude connections (MCP):**
-- Claude for Chrome connected and verified (or noted as skipped, with WebFetch fallback in place)
+- ✅ **Claude for Chrome** connected and verified *(or noted as skipped, with WebFetch fallback in place)*
 
 **Accounts and credentials:**
-- Shopify store handle recorded in brand-book.md (or flagged as must-do before Day 2)
-- Klaviyo (or other platform): list created (named for opt-in leads, not "Buyers", and set to single opt-in), List ID + public key in brand-book.md, private API key in .env
+- ✅ **Shopify store** handle recorded in `brand-book.md` *(or flagged as must-do before Day 2)*
+- ✅ **Klaviyo** (or other platform): list created (named for opt-in leads, *not* "Buyers", and set to **single opt-in**), List ID + **public key** in `brand-book.md`, private API key in `.env`
 
 **Claude Code setup:**
-- Claude Code + Pro plan + model squared away (Sonnet 4.6 or Opus 4.7/4.8)
-- Auto-accept mode on + safe commands pre-approved in .claude/settings.json
+- ✅ Claude Code + Pro plan + model squared away (Sonnet 4.6 or Opus 4.7/4.8)
+- ✅ Auto-accept mode on + safe commands pre-approved in `.claude/settings.json`
 
 **Challenge:**
-- First-run product locked: [product_nickname] (ASIN recorded, or flagged as the one thing to add)
+- ✅ First-run product locked: **[product_nickname]** (ASIN recorded, or flagged as the one thing to add)
 
 **Two hard requirements before Day 2.** Flag either one clearly if it wasn't completed:
 
-- **Shopify store:** Day 2 deploys directly to Shopify admin. Without a store handle in brand-book.md, the deploy can't run.
-- **Klaviyo:** If the List ID and API key are not in place, the Day 2 landing page form will capture nothing.
+- **Shopify store:** Day 2 deploys directly to Shopify admin. Without a store handle in `brand-book.md`, the deploy can't run. *"Set up your Shopify store (free trial at shopify.com) and tell me the handle before Day 2 — takes under 5 minutes."*
+- **Klaviyo:** If the List ID and API key are not in place, the Day 2 landing page form will capture nothing — everyone who scans the QR code falls into a black hole. *"Drop your Klaviyo List ID and API key so the form actually saves subscribers. Takes 3 minutes — see the steps above."*
 
-Then close warm and point forward.
+Then close warm and point forward. Adapt the line to what they actually have:
 
-**End-of-day handoff (always output this at the very end).** After the warm close above, output a clearly marked copy-paste block the user can take into a fresh session for Day 1. Use `pwd` to get the actual folder path, and fill in the product nickname and ASIN from `brand-book.md`.
+> "That's Day 0 done. 🎉 You've got a real brand book, and your `brand-book.md` will power everything we build this week. Tomorrow on **Day 1** we turn this into your product insert: the little card that turns buyers into subscribers. See you then!"
+
+(For path A, reference *their own* brand book rather than a new PDF.)
+
+Update nothing else — keep the focus on their win.
+
+**End-of-day handoff (always output this at the very end).** After the warm close above, output a clearly marked copy-paste block the user can take into a fresh session for Day 1. This keeps sessions from growing unwieldy. Use `pwd` to get the actual folder path, and fill in the product nickname and ASIN from `brand-book.md`:
+
+> "This session is done. Here's how to start Day 1:
+>
+> 1. Go to Circle and watch the Day 1 video
+> 2. Download the **Day 1 skill file** from the lesson
+> 3. Open a **fresh Claude Code session**
+> 4. Paste the prompt below and drag the Day 1 file into the window before hitting enter — Claude will install it and get started"
+
+```
+cd [output of pwd]
+```
+Then in the new session (paste this + drag the Day 1 skill file):
+```
+I'm running the 5 Day Customer Challenge. My brand book is ready in this folder. Product: [product_nickname] (ASIN [asin]). I've dragged in the Day 1 skill file. Install it and run Day 1 — the product insert.
+```
 
 **Note for Claude reading this in a future session:** when the user drags in a skill file and says to install it, read the file content, write it to `.claude/commands/[filename].md` in the current working directory, confirm it's saved, then execute the skill.
 
