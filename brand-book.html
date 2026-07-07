@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>natissy Brand Book</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    @page { size: Letter; margin: 0.6in; }
+    @media print {
+      .page-break { page-break-before: always; }
+      body { background: #fff; }
+      .cover { background: #A5C49A !important; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f2f2f2;
+      font-family: 'Lato', sans-serif;
+      color: #3D2B1F;
+      font-size: 10.5pt;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0.4in auto;
+      background: #ffffff;
+      padding: 0.6in;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+    }
+
+    /* COVER */
+    .cover {
+      background: #A5C49A;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0.7in 0.7in 0.6in;
+      min-height: 11in;
+      position: relative;
+    }
+    .cover-top { display: flex; flex-direction: column; align-items: flex-start; }
+    .cover-tag {
+      font-family: 'Lato', sans-serif;
+      font-size: 9pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ffffff;
+      opacity: 0.82;
+      margin-bottom: 0.35in;
+    }
+    .cover h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 64pt;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.0;
+      letter-spacing: -0.5px;
+    }
+    .cover-sub {
+      font-family: 'Nunito', sans-serif;
+      font-size: 20pt;
+      font-weight: 600;
+      color: #ffffff;
+      opacity: 0.88;
+      margin-top: 0.1in;
+    }
+    .cover-liner {
+      font-family: 'Lato', sans-serif;
+      font-size: 13pt;
+      color: #ffffff;
+      opacity: 0.90;
+      margin-top: 0.25in;
+      max-width: 4.5in;
+      line-height: 1.5;
+    }
+    .cover-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .cover-label {
+      font-family: 'Lato', sans-serif;
+      font-size: 9pt;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #ffffff;
+      opacity: 0.70;
+    }
+    .cover-accent-bar {
+      width: 0.5in;
+      height: 3px;
+      background: #E7A17A;
+      margin-bottom: 0.18in;
+    }
+
+    /* SECTION PAGES */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.14in;
+      margin-bottom: 0.28in;
+      padding-bottom: 0.12in;
+      border-bottom: 1.5px solid #A5C49A;
+    }
+    .section-num {
+      font-family: 'Nunito', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      color: #A5C49A;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .section-title {
+      font-family: 'Nunito', sans-serif;
+      font-size: 18pt;
+      font-weight: 800;
+      color: #3D2B1F;
+    }
+
+    h2.intro-head {
+      font-family: 'Nunito', sans-serif;
+      font-size: 22pt;
+      font-weight: 800;
+      color: #3D2B1F;
+      margin-bottom: 0.15in;
+    }
+    h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 12pt;
+      font-weight: 700;
+      color: #3D2B1F;
+      margin-top: 0.18in;
+      margin-bottom: 0.07in;
+    }
+    p { margin-bottom: 0.12in; }
+    ul { padding-left: 0.22in; margin-bottom: 0.12in; }
+    li { margin-bottom: 0.05in; }
+
+    .tagline {
+      font-family: 'Nunito', sans-serif;
+      font-size: 13pt;
+      font-weight: 600;
+      color: #E7A17A;
+      margin-bottom: 0.1in;
+    }
+
+    /* COLORS */
+    .swatch-row {
+      display: flex;
+      gap: 0.18in;
+      flex-wrap: wrap;
+      margin: 0.18in 0;
+    }
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .swatch-circle {
+      width: 0.85in;
+      height: 0.85in;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .swatch-hex {
+      font-family: 'Lato', sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #3D2B1F;
+      letter-spacing: 0.04em;
+    }
+    .swatch-name {
+      font-family: 'Lato', sans-serif;
+      font-size: 7.5pt;
+      color: #9A7E5C;
+      text-align: center;
+    }
+
+    /* COLOR TABLE */
+    table.color-table { width: 100%; border-collapse: collapse; margin-top: 0.15in; }
+    table.color-table th {
+      font-family: 'Lato', sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9A7E5C;
+      padding: 0.07in 0.1in;
+      text-align: left;
+      border-bottom: 1px solid #CFE7B2;
+    }
+    table.color-table td {
+      font-family: 'Lato', sans-serif;
+      font-size: 9pt;
+      color: #3D2B1F;
+      padding: 0.07in 0.1in;
+      border-bottom: 1px solid #f0ede9;
+      vertical-align: middle;
+    }
+    .td-swatch {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 1px solid rgba(0,0,0,0.08);
+      vertical-align: middle;
+    }
+
+    /* TYPE SPECIMEN */
+    .specimen-box {
+      background: #f9f7f5;
+      border-left: 3px solid #A5C49A;
+      padding: 0.18in 0.2in;
+      margin: 0.12in 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .specimen-label {
+      font-size: 8pt;
+      font-family: 'Lato', sans-serif;
+      color: #9A7E5C;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+    .specimen-heading {
+      font-family: 'Nunito', sans-serif;
+      font-size: 24pt;
+      font-weight: 800;
+      color: #3D2B1F;
+      line-height: 1.1;
+    }
+    .specimen-body {
+      font-family: 'Lato', sans-serif;
+      font-size: 11pt;
+      color: #3D2B1F;
+      line-height: 1.65;
+    }
+
+    /* VOICE EXAMPLES */
+    .voice-example {
+      background: #CFE7B2;
+      border-radius: 6px;
+      padding: 0.13in 0.18in;
+      margin-bottom: 0.1in;
+      font-family: 'Nunito', sans-serif;
+      font-size: 11pt;
+      font-weight: 600;
+      color: #3D2B1F;
+      font-style: italic;
+    }
+
+    /* AUDIENCE CARD */
+    .audience-card {
+      background: #FFF8F4;
+      border: 1px solid #F6C89B;
+      border-radius: 8px;
+      padding: 0.2in 0.22in;
+      margin: 0.15in 0;
+    }
+    .audience-card h3 { margin-top: 0; color: #E7A17A; }
+
+    /* WORD LIST */
+    .word-row {
+      display: flex;
+      gap: 0.15in;
+      flex-wrap: wrap;
+      margin: 0.1in 0;
+    }
+    .word-do {
+      background: #CFE7B2;
+      color: #3D2B1F;
+      font-family: 'Lato', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .word-dont {
+      background: #f0ede9;
+      color: #9A7E5C;
+      font-family: 'Lato', sans-serif;
+      font-size: 9pt;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-decoration: line-through;
+    }
+
+    /* USAGE NOTE */
+    .usage-note {
+      background: #A5C49A;
+      border-radius: 8px;
+      padding: 0.22in 0.25in;
+      color: #ffffff;
+      margin-top: 0.2in;
+    }
+    .usage-note h3 { color: #ffffff; margin-top: 0; }
+    .usage-note p { color: rgba(255,255,255,0.92); }
+
+    /* FOOTER */
+    .page-footer {
+      margin-top: 0.35in;
+      padding-top: 0.1in;
+      border-top: 1px solid #CFE7B2;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Lato', sans-serif;
+      font-size: 7.5pt;
+      color: #9A7E5C;
+    }
+  </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="page cover">
+  <div class="cover-top">
+    <div class="cover-tag">Brand Identity Guidelines</div>
+    <h1>natissy</h1>
+    <div class="cover-sub">by nature</div>
+    <div class="cover-accent-bar" style="margin-top:0.22in;"></div>
+    <div class="cover-liner">Reusable organic cotton panty liners for women who want everyday comfort without chemicals or waste.</div>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-label">Brand Book &nbsp; &middot; &nbsp; July 2026</div>
+    <div class="cover-label">shop.natissy.eu</div>
+  </div>
+</div>
+
+<!-- SECTION 1: BRAND AT A GLANCE -->
+<div class="page page-break">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title">Brand at a Glance</span>
+  </div>
+
+  <div class="tagline">"by nature"</div>
+
+  <p><strong>natissy</strong> makes reusable organic cotton panty liners for women who are done with the irritation, plastic waste, and hidden chemicals in conventional pads. The brand was born from a simple desire: to create something purely organic, comfortable, and kind to bodies and the environment.</p>
+
+  <p>Every natissy product is a small act of care. For the person wearing it, and for the planet.</p>
+
+  <div class="audience-card" style="margin-top:0.2in;">
+    <h3>The Customer</h3>
+    <p>A woman who has experienced irritation or discomfort from conventional pads and is actively looking for a cleaner, gentler, more sustainable alternative. She reads labels, cares about what goes on her body, and wants her everyday choices to reflect her values.</p>
+  </div>
+
+  <div class="audience-card" style="margin-top:0.15in; background:#f5faf0; border-color:#A5C49A;">
+    <h3 style="color:#A5C49A;">Positioning</h3>
+    <p>Reusable organic cotton panty liners for women who want everyday comfort without chemicals or waste.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>natissy Brand Book</span>
+    <span>01 Brand at a Glance</span>
+  </div>
+</div>
+
+<!-- SECTION 2: LOGO -->
+<div class="page page-break">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">Logo</span>
+  </div>
+
+  <p>The natissy logo features a small bird resting among layered leaves in earthy greens, oranges, and browns, with "natissy" in a rounded green wordmark and "by nature" in warm terracotta beneath it. It is warm, natural, and immediately recognizable.</p>
+
+  <div style="background:#f9f7f5; border-radius:8px; padding:0.35in; text-align:center; margin:0.2in 0; min-height:2in; display:flex; align-items:center; justify-content:center;">
+    <div style="font-family:'Nunito',sans-serif; font-size:11pt; color:#9A7E5C;">
+      Place logo file at <code style="background:#e9e4de;padding:2px 6px;border-radius:3px;">assets/logo.png</code>
+    </div>
+  </div>
+
+  <h3>Usage Rules</h3>
+  <ul>
+    <li>Keep clear space equal to at least the height of the letter "n" on all sides.</li>
+    <li>Minimum size: 120px wide on screen, 1 inch wide in print.</li>
+    <li>Do not stretch, distort, or recolor the logo.</li>
+    <li>Do not add drop shadows, outlines, or effects.</li>
+    <li>The logo reads best on white or very light neutral backgrounds.</li>
+    <li>A white version of the logo requires a designer (multi-color mark cannot be simplified).</li>
+  </ul>
+
+  <div class="page-footer">
+    <span>natissy Brand Book</span>
+    <span>02 Logo</span>
+  </div>
+</div>
+
+<!-- SECTION 3: COLORS -->
+<div class="page page-break">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">Colors</span>
+  </div>
+
+  <div class="swatch-row">
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#FFFFFF; border:1.5px solid #e0ddd9;"></div>
+      <div class="swatch-hex">#FFFFFF</div>
+      <div class="swatch-name">White<br>Background</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#3D2B1F;"></div>
+      <div class="swatch-hex">#3D2B1F</div>
+      <div class="swatch-name">Warm Brown<br>Text</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#A5C49A;"></div>
+      <div class="swatch-hex">#A5C49A</div>
+      <div class="swatch-name">Sage Green<br>Accent</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#CFE7B2;"></div>
+      <div class="swatch-hex">#CFE7B2</div>
+      <div class="swatch-name">Mint<br>Secondary</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#9A7E5C;"></div>
+      <div class="swatch-hex">#9A7E5C</div>
+      <div class="swatch-name">Earth Brown<br>Secondary</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#E7A17A;"></div>
+      <div class="swatch-hex">#E7A17A</div>
+      <div class="swatch-name">Terracotta<br>Secondary</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-circle" style="background:#F6C89B;"></div>
+      <div class="swatch-hex">#F6C89B</div>
+      <div class="swatch-name">Peach<br>Secondary</div>
+    </div>
+  </div>
+
+  <table class="color-table">
+    <tr>
+      <th></th>
+      <th>Role</th>
+      <th>HEX</th>
+      <th>Used for</th>
+    </tr>
+    <tr>
+      <td><span class="td-swatch" style="background:#FFFFFF;border:1.5px solid #e0ddd9;"></span></td>
+      <td>Background</td>
+      <td><strong>#FFFFFF</strong></td>
+      <td>Page and card backgrounds</td>
+    </tr>
+    <tr>
+      <td><span class="td-swatch" style="background:#3D2B1F;"></span></td>
+      <td>Text</td>
+      <td><strong>#3D2B1F</strong></td>
+      <td>Body copy, headings on light backgrounds</td>
+    </tr>
+    <tr>
+      <td><span class="td-swatch" style="background:#A5C49A;"></span></td>
+      <td>Accent (Primary)</td>
+      <td><strong>#A5C49A</strong></td>
+      <td>Buttons, CTAs, section rules, highlights</td>
+    </tr>
+    <tr>
+      <td><span class="td-swatch" style="background:#CFE7B2;"></span></td>
+      <td>Mint</td>
+      <td><strong>#CFE7B2</strong></td>
+      <td>Soft background fills, quote blocks</td>
+    </tr>
+    <tr>
+      <td><span class="td-swatch" style="background:#9A7E5C;"></span></td>
+      <td>Earth Brown</td>
+      <td><strong>#9A7E5C</strong></td>
+      <td>Supporting text, dividers, warm accents</td>
+    </tr>
+    <tr>
+      <td><span class="td-swatch" style="background:#E7A17A;"></span></td>
+      <td>Terracotta</td>
+      <td><strong>#E7A17A</strong></td>
+      <td>Warm callouts, emotional highlights</td>
+    </tr>
+    <tr>
+      <td><span class="td-swatch" style="background:#F6C89B;"></span></td>
+      <td>Peach</td>
+      <td><strong>#F6C89B</strong></td>
+      <td>Gentle background sections, soft fills</td>
+    </tr>
+  </table>
+
+  <div class="page-footer">
+    <span>natissy Brand Book</span>
+    <span>03 Colors</span>
+  </div>
+</div>
+
+<!-- SECTION 4: TYPOGRAPHY -->
+<div class="page page-break">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">Typography</span>
+  </div>
+
+  <div class="specimen-box">
+    <div class="specimen-label">Heading Font: Nunito Bold / SemiBold</div>
+    <div class="specimen-heading">Feel good every day.</div>
+    <div style="margin-top:8px; font-family:'Nunito',sans-serif; font-size:14pt; font-weight:600; color:#9A7E5C;">Subheading in Nunito SemiBold</div>
+  </div>
+
+  <div class="specimen-box" style="margin-top:0.15in;">
+    <div class="specimen-label">Body Font: Lato Regular</div>
+    <div class="specimen-body">Made from 100% organic cotton, natissy liners are soft, breathable, and completely free from synthetic chemicals. Kind to your body, kind to the planet.</div>
+  </div>
+
+  <h3>Font Weights</h3>
+  <ul>
+    <li><strong>Nunito 800 (ExtraBold):</strong> Primary headings, brand name</li>
+    <li><strong>Nunito 700 (Bold):</strong> Section headings</li>
+    <li><strong>Nunito 600 (SemiBold):</strong> Subheadings, pull quotes</li>
+    <li><strong>Lato 400 (Regular):</strong> Body copy, descriptions</li>
+    <li><strong>Lato 700 (Bold):</strong> Emphasis, labels</li>
+  </ul>
+
+  <h3>How to Load (for web pages and inserts)</h3>
+  <div style="background:#f5f5f3; border-radius:4px; padding:0.12in 0.15in; font-family:monospace; font-size:8.5pt; color:#3D2B1F; margin-top:0.07in;">
+    &lt;link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet"&gt;
+  </div>
+
+  <div class="page-footer">
+    <span>natissy Brand Book</span>
+    <span>04 Typography</span>
+  </div>
+</div>
+
+<!-- SECTION 5: IMAGERY -->
+<div class="page page-break">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <span class="section-title">Imagery</span>
+  </div>
+
+  <p>natissy photography should feel gentle, real, and grounded in nature. Every image should reinforce the feeling of comfort, care, and naturalness.</p>
+
+  <h3>Direction</h3>
+  <ul>
+    <li>Natural light with soft, warm shadows. No harsh studio or flash lighting.</li>
+    <li>Props that echo nature: cotton plants, green leaves, linen fabric, wooden surfaces, potted plants.</li>
+    <li>Models look relaxed and at ease, not posed or clinical.</li>
+    <li>Colors in the shot should echo the brand palette: soft greens, warm neutrals, creamy whites.</li>
+    <li>Product shots highlight the texture and softness of the cotton fabric.</li>
+    <li>Lifestyle images show a calm, comfortable home environment.</li>
+  </ul>
+
+  <h3>What to Avoid</h3>
+  <ul>
+    <li>Bright neon or high-contrast dramatic lighting.</li>
+    <li>Overly polished or generic stock imagery.</li>
+    <li>Plastic, synthetic, or clinical-looking environments.</li>
+    <li>Images that feel sterile or medical.</li>
+  </ul>
+
+  <div class="audience-card" style="margin-top:0.2in;">
+    <h3>The Feeling to Aim For</h3>
+    <p>Like a quiet Sunday morning. Soft light through a window, a mug of tea, something that feels taken care of. That is the emotional world natissy imagery lives in.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>natissy Brand Book</span>
+    <span>05 Imagery</span>
+  </div>
+</div>
+
+<!-- SECTION 6: VOICE -->
+<div class="page page-break">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <span class="section-title">Voice and Tone</span>
+  </div>
+
+  <h3>Core Voice Adjectives</h3>
+  <div class="word-row">
+    <span class="word-do">Warm</span>
+    <span class="word-do">Empowering</span>
+    <span class="word-do">Natural</span>
+    <span class="word-do">Gentle</span>
+    <span class="word-do">Honest</span>
+  </div>
+
+  <h3 style="margin-top:0.2in;">We Sound Like This</h3>
+  <div class="voice-example">"Your body deserves better than chemicals. So we made something it will actually love."</div>
+  <div class="voice-example">"Soft on you, kind to the earth. That is what natissy is about."</div>
+  <div class="voice-example">"We started natissy because we were tired of the irritation, the waste, and the ingredients we could not pronounce."</div>
+
+  <h3 style="margin-top:0.2in;">Words We Use</h3>
+  <div class="word-row">
+    <span class="word-do">organic</span>
+    <span class="word-do">gentle</span>
+    <span class="word-do">soft</span>
+    <span class="word-do">kind</span>
+    <span class="word-do">breathable</span>
+    <span class="word-do">clean</span>
+    <span class="word-do">conscious</span>
+    <span class="word-do">free from</span>
+    <span class="word-do">made with care</span>
+  </div>
+
+  <h3 style="margin-top:0.15in;">Words We Never Use</h3>
+  <div class="word-row">
+    <span class="word-dont">synergy</span>
+    <span class="word-dont">disrupt</span>
+    <span class="word-dont">game-changing</span>
+    <span class="word-dont">next-level</span>
+    <span class="word-dont">toxic positivity</span>
+    <span class="word-dont">shame-based copy</span>
+  </div>
+
+  <h3 style="margin-top:0.2in;">Tone by Context</h3>
+  <ul>
+    <li><strong>Product inserts and ads:</strong> Shorter, punchy, benefit-first. Lead with comfort or relief.</li>
+    <li><strong>Emails:</strong> Warmer and more personal, like a note from a friend who knows their stuff.</li>
+    <li><strong>Product descriptions:</strong> Honest and specific, focused on how it feels and what it is made from.</li>
+  </ul>
+
+  <div class="page-footer">
+    <span>natissy Brand Book</span>
+    <span>06 Voice and Tone</span>
+  </div>
+</div>
+
+<!-- SECTION 7: AUDIENCE -->
+<div class="page page-break">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <span class="section-title">Audience</span>
+  </div>
+
+  <div class="audience-card">
+    <h3>Who Buys</h3>
+    <p>Women, primarily 25 to 45, who have experienced irritation, itching, or discomfort from conventional disposable pads. They are eco-conscious, read ingredient labels, and are willing to invest a little more in products that align with their values.</p>
+  </div>
+
+  <div class="audience-card" style="margin-top:0.15in;">
+    <h3>The Problem They Have</h3>
+    <p>Conventional pads contain plastics, synthetic fragrances, and chemical absorbents that cause irritation for many women. They also generate significant landfill waste. Many customers do not immediately connect their discomfort to the materials in their products until they discover an alternative.</p>
+  </div>
+
+  <div class="audience-card" style="margin-top:0.15in; background:#f5faf0; border-color:#A5C49A;">
+    <h3 style="color:#A5C49A;">The Transformation natissy Delivers</h3>
+    <p>After switching to natissy, she feels comfortable throughout the day with no irritation or itching. She feels good about her choice, both for her own body and for the environment. It is a small daily act of self-care that also feels responsible.</p>
+  </div>
+
+  <div class="audience-card" style="margin-top:0.15in; background:#FFF8F4; border-color:#F6C89B;">
+    <h3 style="color:#E7A17A;">What Motivates the Purchase</h3>
+    <p>Irritation relief comes first. Eco-friendliness is the second pull. Once she tries it, comfort and softness keep her coming back and referring to friends.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>natissy Brand Book</span>
+    <span>07 Audience</span>
+  </div>
+</div>
+
+<!-- SECTION 8: USING THIS BOOK -->
+<div class="page page-break">
+  <div class="section-header">
+    <span class="section-num">08</span>
+    <span class="section-title">Using This Brand Book</span>
+  </div>
+
+  <div class="usage-note">
+    <h3>Your Single Source of Truth</h3>
+    <p>This file powers the entire 5 Day Customer Challenge. Days 1 to 5 (product insert, landing page, post-opt-in guide, email sequence, and review dashboard) all read from the <code style="background:rgba(255,255,255,0.2);padding:1px 5px;border-radius:3px;">brand-book.md</code> YAML block to get your colors, fonts, voice, and audience automatically. You never have to re-enter them.</p>
+    <p style="margin-top:0.1in;">You can edit any section any time as natissy evolves. This brand book is also fully usable outside the challenge: share it with designers, copywriters, or anyone creating content for natissy.</p>
+  </div>
+
+  <h3 style="margin-top:0.25in;">Before Day 2: Two Things to Add</h3>
+  <ul>
+    <li><strong>Klaviyo List ID and public API key</strong> in <code>brand-book.md</code> so the opt-in form captures subscribers.</li>
+    <li><strong>Logo file</strong> saved to <code>assets/logo.png</code> so it embeds in your insert and landing page.</li>
+  </ul>
+
+  <h3 style="margin-top:0.2in;">Challenge Overview</h3>
+  <ul>
+    <li><strong>Day 0 (today):</strong> Brand book and workspace setup.</li>
+    <li><strong>Day 1:</strong> Product insert: the card that turns buyers into subscribers.</li>
+    <li><strong>Day 2:</strong> Opt-in landing page, deployed to Shopify.</li>
+    <li><strong>Day 3:</strong> Post-opt-in free guide, hosted and linked.</li>
+    <li><strong>Day 4:</strong> Automated email welcome sequence.</li>
+    <li><strong>Day 5:</strong> Review and repeat-buyer dashboard.</li>
+  </ul>
+
+  <div style="margin-top:0.3in; padding: 0.18in 0.2in; border:1.5px solid #CFE7B2; border-radius:8px;">
+    <p style="margin:0; font-family:'Nunito',sans-serif; font-size:11pt; font-weight:600; color:#3D2B1F;">First-run product: <span style="color:#A5C49A;">Reusable Panty Liners</span> &nbsp;|&nbsp; ASIN: <span style="color:#9A7E5C;">B08HRRTCZF</span></p>
+  </div>
+
+  <div class="page-footer">
+    <span>natissy Brand Book</span>
+    <span>08 Using This Brand Book</span>
+  </div>
+</div>
+
+</body>
+</html>
