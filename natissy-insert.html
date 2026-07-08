@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>natissy Panty Liner Care Guide Insert</title>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    width: 100%; height: 100vh;
+    background: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Titillium Web', sans-serif;
+  }
+  .preview-scaler { transform-origin: center center; }
+  @page { size: 4in 6in; margin: 0; }
+  @media print {
+    html, body { background: #fff; width: auto; height: auto; overflow: visible; display: block; }
+    .preview-scaler { transform: none !important; }
+  }
+  .insert {
+    position: relative;
+    width: 600px;
+    height: 900px;
+    background:
+      radial-gradient(ellipse 75% 55% at 50% 32%, rgba(255,255,255,0.06) 0%, transparent 100%),
+      radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0,0,0,0.05) 0%, transparent 60%),
+      #FFFFFF;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .top-accent {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #A5C49A 0%, #E7A17A 50%, #A5C49A 100%);
+    z-index: 3;
+  }
+  .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 52px 48px 54px;
+    box-sizing: border-box;
+  }
+  .logo-area {
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 14px;
+  }
+  .logo-name {
+    font-weight: 900;
+    font-size: 27px;
+    color: #3D7A30;
+    letter-spacing: -0.5px;
+    line-height: 1;
+  }
+  .logo-tagline {
+    font-weight: 600;
+    font-size: 10px;
+    color: #E7A17A;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 3px;
+  }
+  .guide-label {
+    font-size: 12px;
+    font-weight: 400;
+    color: #3D2B1F;
+    opacity: 0.42;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hook {
+    font-weight: 900;
+    font-size: 37px;
+    color: #3D2B1F;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+  }
+  .hook .accent { color: #E7A17A; }
+  .spacer { flex: 1; min-height: 20px; }
+  .cards-row {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+  }
+  .card {
+    flex: 1;
+    background: rgba(165,196,154,0.06);
+    border: 1px solid rgba(165,196,154,0.28);
+    border-radius: 14px;
+    padding: 20px 10px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+    text-align: center;
+  }
+  .card-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3D2B1F;
+    line-height: 1.25;
+  }
+  .more-hint {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    color: #9A7E5C;
+    margin-top: 14px;
+    letter-spacing: 0.2px;
+    opacity: 0.85;
+  }
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(165,196,154,0.45), transparent);
+    margin: 0 0 16px;
+  }
+  .scan-label {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #A5C49A;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .qr-block {
+    border: 1.5px solid rgba(165,196,154,0.7);
+    border-radius: 16px;
+    background: rgba(165,196,154,0.04);
+    padding: 18px 18px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .qr-block img {
+    width: 164px;
+    height: 164px;
+    display: block;
+  }
+  .qr-url {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3D2B1F;
+    text-align: center;
+    opacity: 0.65;
+    letter-spacing: 0.2px;
+  }
+  .support {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 300;
+    color: #3D2B1F;
+    opacity: 0.2;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="preview-scaler">
+  <div class="insert">
+    <div class="top-accent"></div>
+
+    <!-- Botanical SVG texture -->
+    <svg style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1" viewBox="0 0 600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#A5C49A" fill="none" opacity="0.13">
+        <ellipse cx="58" cy="128" rx="38" ry="13" stroke-width="0.7" transform="rotate(-30 58 128)"/>
+        <line x1="30" y1="105" x2="86" y2="151" stroke-width="0.35"/>
+        <ellipse cx="522" cy="78" rx="22" ry="8" stroke-width="0.7" transform="rotate(20 522 78)"/>
+        <line x1="505" y1="66" x2="539" y2="90" stroke-width="0.35"/>
+        <ellipse cx="567" cy="298" rx="30" ry="10" stroke-width="0.7" transform="rotate(-15 567 298)"/>
+        <line x1="543" y1="283" x2="591" y2="313" stroke-width="0.35"/>
+        <ellipse cx="553" cy="458" rx="17" ry="6" stroke-width="0.7" transform="rotate(45 553 458)"/>
+        <ellipse cx="54" cy="682" rx="40" ry="14" stroke-width="0.7" transform="rotate(25 54 682)"/>
+        <line x1="22" y1="665" x2="86" y2="699" stroke-width="0.35"/>
+        <ellipse cx="542" cy="752" rx="28" ry="10" stroke-width="0.7" transform="rotate(-40 542 752)"/>
+        <line x1="519" y1="726" x2="565" y2="778" stroke-width="0.35"/>
+        <ellipse cx="300" cy="48" rx="20" ry="7" stroke-width="0.7" transform="rotate(5 300 48)"/>
+        <ellipse cx="148" cy="222" rx="14" ry="5" stroke-width="0.7" transform="rotate(-55 148 222)"/>
+        <ellipse cx="442" cy="182" rx="18" ry="6" stroke-width="0.7" transform="rotate(35 442 182)"/>
+        <ellipse cx="78" cy="422" rx="22" ry="8" stroke-width="0.7" transform="rotate(-20 78 422)"/>
+        <ellipse cx="492" cy="602" rx="17" ry="6" stroke-width="0.7" transform="rotate(60 492 602)"/>
+        <ellipse cx="168" cy="802" rx="24" ry="9" stroke-width="0.7" transform="rotate(-10 168 802)"/>
+        <ellipse cx="362" cy="842" rx="19" ry="7" stroke-width="0.7" transform="rotate(15 362 842)"/>
+        <path d="M 202 352 C 217 337 232 342 222 362 C 212 382 197 377 202 352Z" stroke-width="0.65"/>
+        <path d="M 422 502 C 437 487 452 492 442 512 C 432 532 417 527 422 502Z" stroke-width="0.65"/>
+        <path d="M 98 562 C 113 547 128 552 118 572 C 108 592 93 587 98 562Z" stroke-width="0.65"/>
+        <ellipse cx="270" cy="650" rx="15" ry="5" stroke-width="0.65" transform="rotate(30 270 650)"/>
+      </g>
+    </svg>
+
+    <div class="content">
+      <!-- TOP GROUP -->
+      <div>
+        <!-- LOGO PLACEHOLDER: replace with <img src="assets/logo.png" style="height:44px;width:auto;display:block;align-self:flex-start;"> before printing -->
+        <div class="logo-area">
+          <div class="logo-name">natissy</div>
+          <div class="logo-tagline">by nature</div>
+        </div>
+        <div class="guide-label">Panty Liner Care Guide</div>
+        <p class="hook">
+          Most reusable liners<br>
+          last 2 years.<br>
+          Yours can last <span class="accent">8.</span>
+        </p>
+      </div>
+
+      <div class="spacer"></div>
+
+      <!-- MIDDLE: 3 teaser cards -->
+      <div>
+        <div class="cards-row">
+          <!-- Cold water -->
+          <div class="card">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 5 C22 5 10 19 10 28 C10 35.2 15.4 40 22 40 C28.6 40 34 35.2 34 28 C34 19 22 5 22 5Z" stroke="#A5C49A" stroke-width="2" fill="#A5C49A" fill-opacity="0.15"/>
+              <path d="M16 29 C16 29 16 33 20 35" stroke="#A5C49A" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="card-label">Cold water<br>first</div>
+          </div>
+          <!-- Sunlight -->
+          <div class="card">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="8" stroke="#A5C49A" stroke-width="2" fill="#A5C49A" fill-opacity="0.15"/>
+              <line x1="22" y1="5" x2="22" y2="10" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="22" y1="34" x2="22" y2="39" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="5" y1="22" x2="10" y2="22" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="34" y1="22" x2="39" y2="22" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10.9" y1="10.9" x2="14.5" y2="14.5" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="29.5" y1="29.5" x2="33.1" y2="33.1" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="33.1" y1="10.9" x2="29.5" y2="14.5" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="14.5" y1="29.5" x2="10.9" y2="33.1" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div class="card-label">Dry in<br>sunlight</div>
+          </div>
+          <!-- No softener -->
+          <div class="card">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 7 L17 11 C13 12.5 11 16 11 20 L11 33 C11 36 13.5 38 22 38 C30.5 38 33 36 33 33 L33 20 C33 16 31 12.5 27 11 L27 7 Z" stroke="#A5C49A" stroke-width="1.8" fill="#A5C49A" fill-opacity="0.08"/>
+              <rect x="17" y="6" width="10" height="5" rx="1.5" stroke="#A5C49A" stroke-width="1.5"/>
+              <line x1="16" y1="22" x2="28" y2="34" stroke="#E7A17A" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="28" y1="22" x2="16" y2="34" stroke="#E7A17A" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <div class="card-label">Skip the<br>softener</div>
+          </div>
+        </div>
+        <p class="more-hint">...and 2 more care secrets inside</p>
+      </div>
+
+      <div class="spacer"></div>
+
+      <!-- BOTTOM: CTA + QR -->
+      <div>
+        <div class="divider"></div>
+        <div class="scan-label">Get your free 5-step care guide</div>
+        <div class="qr-block">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAsQAAALECAIAAACAN7HUAAATb0lEQVR4nO3du3EFuRFAUVHFrJSJfEUlX5korpEvg4XdiwUb884JgIP5Pd4aA/31PM/fAAD+rL//9gIAgLuJCQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQPJ98mD/+e+/Tx5ulH/+419b/s7Ja7iy5l3reeuxVkxbzy67nvkVK9fn5HpW7Frzyb+zy7Rn461OXmdfJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAACSo7M5VkzbP3/Frr3fp+2Nb8//btd6pl3nFSdnqUyb9TBtzdNMm6Vy472Y9r77MgEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQjJvNseKTZz2smDYP4uR6dpl236fNMjg5t2Xaue9ycsbHyft14xyZFf7v/MyXCQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIDkytkcdCf3mZ+2D//J2QHT5qTsOtaKk+u5cW7CyVkYb53bcuMMi7fyZQIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgMZvjMifnApx0cj//t86w2OXGORe7fPIMi5N/Z8W0Z4Of+TIBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkFw5m8Oe7XNM24f/5OyAXU7O+Jg2e2LXmqed164133hP38r/nZ/5MgEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQjJvN8cl7v++yaz//k39nxck5BdOuz7T5C65zd+N5vfV993+n82UCAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIPl6nue318AfcON+/p9s2p7/02ZPrJg2f+Hkem48d79Rn8mXCQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIDk+7cX8GfcuKf9SdOuz7R5ENPmApy8F57n9zn5zJ80bQ7INNOeeV8mAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAAJKv53mOHezGmRFvXfM0nzxLZcXJ+z7tWCveeu7TfhOmzYOY9vs8zcn75csEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQDJuNscuN+7HfnIf9ZN72r/VjTMa+Nm062w973Pj3KgVvkwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJEdnc0xzcrbCSW+dJ7LLtD3tb5zxMW3NJ90492fFtPu+4sbncNqxdvFlAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACD5PnmwkzMRbtxHfcWNszBWTJtTcPJZPXlPpz0/b50VcvLZ2HXuN/4+r5j2zK+4cc2+TAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkX8/z/PYa/rAb9/Pf5eS5T9sf/sY1r5g2V2KXaet5q5Pv+7Tf3l2mrfnG33BfJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAACSK2dzrJi29/su0/bPn7aH/I3HmrbmFdNm30x736fN69nlxndnhfvV+TIBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkHz/9gL+31v3Ld9l2gyCaevZ5eS8jBvnbkxz45qn3a+V9Zx832+8PitufFZX+DIBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkHw9z/Pba/hLTJsZcXI/9ml7yO+ac3FyXsaKtz5jJ6/ztFk8N97Tk+/XCmvupv2Gr/BlAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACD5PnmwafvwTzNt9sSKG+du7DrWW+/FtJkI00ybPeF+/eyt13naHBlfJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAACSo7M5dpm2P/yN+95P2/t92tyNaXvsn3w2Tt73G6/zje/FNN6L9/FlAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAZN5tj2h77K3/n5FyJtzq5D/+NMxpWTJvjMO1dXvHWeRC7ruG0+3Wjae/pLr5MAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACTjZnPcaNo+87v2fv/kPfY/eQbBydkBb72GJ7111oNZPHfxZQIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAg+Xqe59jBdu1tvmsf9Wl72k+7Pjf65Gfjk+/7ipPXZ9q9mDbnYpeT78Vbf1t28WUCAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIDk6m2PFtL3xp+3HfvL6rPjkveh3uXFGwy7e936sFTee17QZHzc6eQ19mQAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIvk8ebNre77v+zrR5B2914/Oz4sY1T7s+b527ceNvy7RruGLXs3HyWNOeDV8mAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAAJKjszne6uScghXT9r2ftqf9rmOtmHYNpz2rK2489xuv80nTrs+09ayYNr/DlwkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCA5OhsjpOzFXY5ubf5tHPfZdpMjZVjTZvxscuNz/O0a3hyJsLJY+16d6a977vcOCPmJF8mAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAAJKjszlWnNzTfpeT++dPM20//5PX+cZZMyvMgzhj2m/USSfv142/Gyum3VNfJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAACScbM5du03fnLv92lzN3btRX9y/sKuv3NyjsO0Pf/f+jyveOv8lxWffO4rpq35rdfZlwkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCA5Ot5nt9ewx+2awbBW03bh//k7IAVN57Xyetz0sl7cZLn+czfeSuzOQCAjyMmAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAyffJg52cB3HjfvUrTh7rk+d3THPyvMzL6Kad+4qTv703/h5Oey9O/j6v8GUCAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIDk6m2PFyRkNb50rcfK8pl3nXX9nZc3TZoVMu84n5wJMuxc3euvv2K5jeX5+5ssEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQDJuNseKT57fMe1YJ53cP//GmRonTXu/Vpxc88nnZ9p1Pmnae3rj/6ZdfJkAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASL6e5/ntNfwlTu7ZvsuNe79Pu843nvtb9+pf4fnpTs70WXHjNVxx4/t1ki8TAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAMmVsznsx36XT96H/8Zz32XazJEb55vcuOZdpr07Nx7r5LPhywQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBA8v3bC/ir7Nrb3EyE/ndWnFzPyf3qp81NmHZPp5k2K2Sat76nJ731vHyZAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjGzea4cc/2G/fq37XmabMeTq5nl5PP87TZE9Pe5RXTzuvG340Vn3ydp537Cl8mAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAAJKv53mOHezGmQi71jxt3sGNe7+bQXDX3+Fn067ztLktu9x4Daf931nhywQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAcnQ2x0nmFHTT9oc/uZ5pc2SmmTZf4JPv17Tr89b3fdrv/LQ1+zIBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkHz/9gL+3679xk/uST5tLsDJcz+5D/+uPfZvvF83zkmZNstgxbQ5F9O8de7Gik++7yt8mQAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxs3mWHFyj/Qb5wucnJtgRsMZ02YinHRybsuNPnmuzUm7ruFb32VfJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAACScbM5btxjf9p8immzMKZdH3528h2cNndj1985uea3Huukaed14zX0ZQIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAg+Xqe59jBpu0Pf/LvrJg2w+Kt67lx3/sbr/PJY01b84ppv2O73HidbzTt99mXCQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIDko2dznGR/+DPHWnHjnItp537j+zVtlsG09ax46yyVG9e8wmwOAOAaYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJB8nzzYrv3P37qn/S7Tzn2Xaed1457/J904p2DaLJUbZzTsYv7Lmb+ziy8TAEAiJgCAREwAAImYAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAMnX8zy/vYa/xMk90u2f/zPXuZs2p2CXG+dlnHyePavv89bnx5cJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgOS1szluZAbBGTde52n3dMWN13nFtPt+43mteOvvxq5jrTCbAwC4hpgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAk3ycPtmu/8Rud3CP9RiefjWn3YtoMi2kzCE6e+y5vXfMuJ8992vO84sbnx5cJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgOTobI4V0+YmrLhxn/mVv7PrWG+d43DyvN46u2TXsXbd95PP84ppMyN2ufE93eXGuRsrfJkAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMbN5ljxyXMKTs7UOGnamqfNE9l1rBv3/J+25mn3dNc8kWlzf1ZMezZ2mfb7vMKXCQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIDkytkcn2za3vi79pA/OcvgpJMzEVbcuOf/W6/hrvM66eT8jmn3/eSaV0x7l32ZAAASMQEAJGICAEjEBACQiAkAIBETAEAiJgCAREwAAImYAAASMQEAJGICAEjM5hjk5J7tn7w3/i7T5iZMO/eTz8+0mQgnz2uXabMedt2vab8bK6b99q7wZQIASMQEAJCICQAgERMAQCImAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAguXI2x7R91HexD//Ppq35xlkYu0yb/7Ji17GmzWRZcXLNu57DG9+vk+/ptN9DXyYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAknGzOW7c9/6kG/eQX7HrWG+dB3HjPV1x43VesWvGx43Pz657Om3OxbT/TdPed18mAIBETAAAiZgAABIxAQAkYgIASMQEAJCICQAgERMAQCImAIBETAAAiZgAAJKv53l+ew0AwMV8mQAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBIxAQAkIgJACAREwBAIiYAgERMAACJmAAAEjEBACRiAgBI/gdOtMTEtIgjjwAAAABJRU5ErkJggg==" alt="Scan for care guide">
+          <div class="qr-url">shop.natissy.eu/panty-liner-care</div>
+        </div>
+        <div class="support">Questions? support@natissy.eu</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function fitToScreen() {
+  var el = document.querySelector('.preview-scaler');
+  var insert = document.querySelector('.insert');
+  var scaleX = (window.innerWidth - 40) / insert.offsetWidth;
+  var scaleY = (window.innerHeight - 40) / insert.offsetHeight;
+  var scale = Math.min(scaleX, scaleY, 1);
+  el.style.transform = 'scale(' + scale + ')';
+}
+fitToScreen();
+window.addEventListener('resize', fitToScreen);
+</script>
+</body>
+</html>
