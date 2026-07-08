@@ -92,22 +92,45 @@
     background: rgba(165,196,154,0.06);
     border: 1px solid rgba(165,196,154,0.28);
     border-radius: 16px;
-    padding: 28px 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+  }
+  .fact-img {
+    width: 155px;
+    min-width: 155px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+  }
+  .fact-img-placeholder {
+    width: 155px;
+    min-width: 155px;
+    background: rgba(165,196,154,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fact-body {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px 22px;
+    text-align: left;
   }
   .fact-eyebrow {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     color: #A5C49A;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
   .fact-text {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: #3D2B1F;
     line-height: 1.35;
@@ -223,19 +246,18 @@
       <!-- MIDDLE: single teaser fact -->
       <div>
         <div class="fact-card">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="9" stroke="#A5C49A" stroke-width="2" fill="#A5C49A" fill-opacity="0.15"/>
-            <line x1="24" y1="5" x2="24" y2="11" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
-            <line x1="24" y1="37" x2="24" y2="43" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
-            <line x1="5" y1="24" x2="11" y2="24" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
-            <line x1="37" y1="24" x2="43" y2="24" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
-            <line x1="11.5" y1="11.5" x2="15.7" y2="15.7" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
-            <line x1="32.3" y1="32.3" x2="36.5" y2="36.5" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
-            <line x1="36.5" y1="11.5" x2="32.3" y2="15.7" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
-            <line x1="15.7" y1="32.3" x2="11.5" y2="36.5" stroke="#A5C49A" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <div class="fact-eyebrow">Did you know?</div>
-          <div class="fact-text">The best way to dry your liners<br>is in <span class="accent">direct sunlight.</span></div>
+          <!-- IMAGE PLACEHOLDER: replace div below with <img class="fact-img" src="data:image/jpeg;base64,..." alt="natissy liners"> -->
+          <div class="fact-img-placeholder">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="10" width="32" height="24" rx="3" stroke="#A5C49A" stroke-width="1.5" fill="none"/>
+              <circle cx="15" cy="19" r="3.5" stroke="#A5C49A" stroke-width="1.5" fill="none"/>
+              <path d="M6 28 L14 21 L20 27 L27 20 L38 30" stroke="#A5C49A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="fact-body">
+            <div class="fact-eyebrow">Did you know?</div>
+            <div class="fact-text">The best way to dry your liners is in <span class="accent">direct sunlight.</span></div>
+          </div>
         </div>
         <p class="more-hint">Scan below for 4 more care secrets</p>
       </div>
