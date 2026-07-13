@@ -87,13 +87,13 @@ natissy by nature
 
 Hey [First Name],
 
-I started natissy because I was tired of not knowing what was touching my body every day.
+I wanted a safer future for my daughter.
 
-I read the labels. Chlorine processing. Synthetic fragrances. Plastic backings. None of it had anything to do with a body or a plant.
+When I discovered how many chemicals are in regular pads, I knew I had to make a change. Chlorine processing. Synthetic fragrances. Plastic backings against the most sensitive skin we have.
 
-I wanted one material I could understand. So I made it: organic cotton. No fragrance, no plastic, no chemical absorbents.
+natissy was born from a desire to create something purely organic, comfortable, and kind to our bodies. One material: organic cotton. Nothing added.
 
-That is natissy.
+I am glad you are here.
 
 Tina Striker
 natissy by nature
