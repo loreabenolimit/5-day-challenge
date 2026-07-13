@@ -17,27 +17,27 @@
 
 Hey [First Name],
 
-Welcome to natissy. Your 5-step care guide is right here, no waiting required.
+Your 5-step care guide is right here. Welcome to natissy, by the way. I am so glad you are here.
 
 You already know the first one from your insert: dry in direct sunlight. Here are the other four.
 
-**Step 2: Wash at 30 to 40 degrees.**
-Hot water weakens organic cotton fibers over time and can cause shrinkage. A cool to warm wash protects the fabric and keeps it soft wash after wash.
+**Step 2: You can wash up to 95 degrees.**
+Organic cotton is resilient. A hot wash is actually great for hygiene, and natissy liners handle it beautifully. Wash at whatever temperature feels right to you. The cotton holds up.
 
 **Step 3: Skip the fabric softener.**
-This is the one most people do not know. Fabric softener coats cotton fibers and reduces absorbency. It also breaks down the material faster. Use a gentle, fragrance-free detergent instead.
+I know, counterintuitive. But fabric softener slowly coats and breaks down cotton fibers, and reduces absorbency over time. A gentle, fragrance-free detergent is all you need. The cotton does the rest.
 
-**Step 4: Store them with air.**
-Keep your clean liners in a breathable cotton pouch or a drawer, not a sealed bag or container. Organic cotton needs airflow to stay fresh between uses.
+**Step 4: Give them some air.**
+A breathable cotton pouch or a drawer works perfectly between uses. Just avoid sealed bags. Organic cotton likes to breathe, and a little airflow keeps everything fresh.
 
 **Step 5: Cold water first for stains.**
-If you need to treat a stain, always start with cold water, never hot. Hot water sets stains into the fabric permanently. A short cold soak first, then your normal gentle wash, does the job.
+Always cold, never hot. Hot water sets stains into the fabric permanently. A quick cold soak first, then your normal wash, and you are good.
 
-Follow these five and your natissy liners will last years, not months.
+These five things are the difference between liners that last two years and ones that last eight.
 
-Over the next few weeks I will check in with a few more things I think you will find useful. Nothing to buy, just things worth knowing.
+Over the next few weeks I will check in with a few more things I think you will love. Nothing salesy, just genuinely useful.
 
-Glad you are here.
+So glad you found us.
 
 [FOUNDER_NAME]
 natissy by nature
