@@ -87,24 +87,18 @@ natissy by nature
 
 Hey [First Name],
 
-natissy exists because I was tired of not knowing what was touching my body every single day.
+I started natissy because I was tired of not knowing what was touching my body every day.
 
-I had tried most of the mainstream brands. Some were fine. Some caused the kind of irritation that just becomes background noise after a while, something you almost accept as normal.
+I read the labels. Chlorine processing. Synthetic fragrances. Plastic backings. None of it had anything to do with a body or a plant.
 
-Then I started reading labels. And I could not stop.
+I wanted one material I could understand. So I made it: organic cotton. No fragrance, no plastic, no chemical absorbents.
 
-Chlorine processing. Synthetic fragrances added to something worn against your most sensitive skin. Plastic backings and absorbent gels made from materials that have nothing to do with a body or a plant.
-
-I wanted something I could understand. Something made from one material, grown without pesticides, soft because of what it is and not because of what has been added to it.
-
-That is natissy. One material: organic cotton. No fragrance, no plastic, no chemical absorbents. Just something gentle, made with care.
-
-I am glad you found us.
+That is natissy.
 
 Tina Striker
 natissy by nature
 
-P.S. If you want care tips and real stories from women making the switch, we are on Instagram at @natissypads. Followers get early access to new products and are first on our broadcast channel when it launches.
+P.S. Care tips and real stories from women making the switch: @natissypads on Instagram.
 
 ---
 
