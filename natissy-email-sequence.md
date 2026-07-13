@@ -91,7 +91,7 @@ I wanted a safer future for my daughter.
 
 When I discovered how many chemicals are in regular pads, I knew I had to make a change. Chlorine processing. Synthetic fragrances. Plastic backings against the most sensitive skin we have.
 
-natissy was born from a desire to create something purely organic, comfortable, and kind to our bodies. One material: organic cotton. Nothing added.
+natissy was born from a desire to create something purely organic, comfortable, and kind to our bodies. Organic cotton or bamboo. Nothing added.
 
 I am glad you are here.
 
