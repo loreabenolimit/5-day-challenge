@@ -39,7 +39,7 @@ Over the next few weeks I will check in with a few more things I think you will 
 
 So glad you found us.
 
-[FOUNDER_NAME]
+Tina Striker
 natissy by nature
 
 ---
@@ -71,7 +71,7 @@ Many women notice it most on the days they were most bothered by conventional li
 
 Any questions, just hit reply. I read them myself.
 
-[FOUNDER_NAME]
+Tina Striker
 natissy by nature
 
 ---
@@ -101,7 +101,7 @@ That is natissy. One material: organic cotton. No fragrance, no plastic, no chem
 
 I am glad you found us.
 
-[FOUNDER_NAME]
+Tina Striker
 natissy by nature
 
 P.S. If you want care tips and real stories from women making the switch, we are on Instagram at @natissypads. Followers get early access to new products and are first on our broadcast channel when it launches.
@@ -127,7 +127,7 @@ If you have a moment: https://www.amazon.com/review/create-review?asin=B08HRRTCZ
 
 Either way, thank you for being part of what we are building.
 
-[FOUNDER_NAME]
+Tina Striker
 natissy by nature
 
 ---
@@ -165,7 +165,7 @@ Organic cotton has one ingredient: cotton. Grown without synthetic pesticides an
 
 You already made the switch. I just wanted you to know why it matters.
 
-[FOUNDER_NAME]
+Tina Striker
 natissy by nature
 
 ---
@@ -193,7 +193,7 @@ If you have been wearing your natissy liners and have had a similar experience, 
 
 And if you have not had a chance to leave a review on Amazon yet, it still means a lot: https://www.amazon.com/review/create-review?asin=B08HRRTCZF
 
-[FOUNDER_NAME]
+Tina Striker
 natissy by nature
 
 ---
@@ -223,14 +223,14 @@ Code applied automatically at checkout. No expiry.
 
 And if you already have two sets and are well and truly sorted, I am glad. Thank you for giving natissy a try.
 
-[FOUNDER_NAME]
+Tina Striker
 natissy by nature
 
 ---
 
 ## Placeholders to fill before going live
 
-- [FOUNDER_NAME]: The name emails are signed from
+- Tina Striker: The name emails are signed from
 - [LOGO_URL]: Hosted URL of the natissy logo (upload to Klaviyo image library or Shopify CDN)
 - [UNSUBSCRIBE_LINK]: Klaviyo inserts this automatically when you use {{ unsubscribe_link }} or click "Add unsubscribe link" in the template editor
 - [YOUR_MAILING_ADDRESS]: Required by CAN-SPAM. Add your business mailing address.
