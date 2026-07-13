@@ -155,7 +155,7 @@ Synthetic fibers often blended into the soft top layer. They can absorb moisture
 
 This is not meant to alarm you. It is just information most brands do not put on the front of their packaging.
 
-Organic cotton has one ingredient: cotton. Grown without synthetic pesticides and processed without chlorine or added chemicals. That is the whole story.
+Organic cotton and bamboo have one thing in common: they are grown, not manufactured. No chlorine, no synthetic chemicals, nothing added. That is the whole story.
 
 You already made the switch. I just wanted you to know why it matters.
 
@@ -177,11 +177,11 @@ Hey [First Name],
 
 I love getting messages from natissy customers. Here are a few recent ones:
 
-> [ADD REAL CUSTOMER REVIEW HERE: look for a quote about irritation relief or discomfort going away.]
+> They are soft, comfy, non-irritating and stay in place. Definitely the most comfortable liner I've ever had in my life.
 
-> [ADD REAL CUSTOMER REVIEW HERE: look for a quote about softness or comfort vs conventional liners.]
+> I like that the print faces me so I can at least enjoy it unlike other reusable pads. They fit fine. They aren't too noticeable or bothersome to wear. They are easy to wash.
 
-> [ADD REAL CUSTOMER REVIEW HERE: look for a quote about how long the liners last or the eco-impact.]
+> This is a solution for all us ladies who get irritated by traditional absorbent liners. I'm happy with this purchase.
 
 If you have been wearing your natissy liners and have had a similar experience, I would love to hear your story. Just hit reply and tell me how it has been going.
 
